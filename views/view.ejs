@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>查書大師-<%= dat.id%></title>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+  </head>
+  <body class="container container-fluid bg-secondary bg-opacity-10">
+    <h3 class="mt-4">書名:</h3>
+    <div class="mt-2 fs-4"><%= dat.bookName %></div>
+    <hr />
+    <h3 class="mt-2">心得:</h3>
+    <div class="fs-4 mt-2"><%= dat.review %></div>
+    <a class="btn btn-primary mt-5" href="/edit/<%= dat.id%>">編輯</a>
+  </body>
+</html>

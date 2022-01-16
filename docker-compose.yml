@@ -1,0 +1,26 @@
+version: "3.8"
+
+services: 
+  app:
+    container_name: app
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    ports: 
+      - 3000:3000
+    volumes: 
+      - .:/app
+      - '/app/node_modules'
+    depends_on: 
+      - mysql_server
+  
+  mysql_server:
+    container_name: mysql_server
+    image: mysql:8.0
+    environment: 
+      - MYSQL_DATABASE=books
+      - MYSQL_USER=test
+      - MYSQL_PASSWORD=test
+      - MYSQL_ROOT_PASSWORD=root
+    volumes:
+      - ./sql:/docker-entrypoint-initdb.d

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>查書大師-新增</title>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+  </head>
+  <body class="container container-fluid bg-secondary bg-opacity-10">
+    <form action="/create" method="post" class="mt-4">
+      <div class="form-label">書名</div>
+      <input class="form-control" type="text" name="bookName" id="bookName" />
+      <div class="form-label mt-3">心得</div>
+      <textarea
+        class="form-control"
+        style="resize: none"
+        name="review"
+        id="review"
+        cols="30"
+        rows="10"
+      ></textarea>
+      <input class="mt-2 btn btn-primary" type="submit" value="送出" />
+    </form>
+  </body>
+</html>
